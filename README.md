@@ -1,31 +1,45 @@
-# Billingrad
+# BILLINGRAD-API-RUBY
 
-TODO: Write a gem description
+BILLINGRAD-API-RUBY - gem-обертка над API сервиса рассылок sms-сообщений [Billingrad](http://billingrad.com/).
 
-## Installation
+## Установка
 
-Add this line to your application's Gemfile:
+Добавьте строку ниже в Gemfile вашего приложения:
 
 ```ruby
-gem 'billingrad'
+gem 'billingrad-api-ruby', github: 'hats/billingrad-api-ruby'
 ```
 
-And then execute:
+После чего выполните команду:
 
     $ bundle
 
-Or install it yourself as:
+## Использование
 
-    $ gem install billingrad
+``` ruby
+require 'rubygems'
+require 'billingrad-api-ruby'
 
-## Usage
+# укажите ваши данные здесь
+open_api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+delivery_id  = 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
 
-TODO: Write usage instructions here
+# настройте клиент для работы с Billingrad API
+@client = Billingrad::Client.new open_api_key, delivery_id
 
-## Contributing
+# отправка sms-сообщения
+@client.send(
+  to: '+79261234567',
+  text: 'Привет! Это тестовое сообщение!'
+)
+```
 
-1. Fork it ( https://github.com/[my-github-username]/billingrad/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+## Ваш вклад в проект
+
+1. Форкните репозиторий ( https://github.com/hats/billingrad-api-ruby/fork )
+2. Создайте ветку для ваших дополнений (`git checkout -b my-new-feature`)
+3. Зафиксируйте ваши изменения (`git commit -am 'Add some feature'`)
+4. Запуште ваши изменения в репозиторий (`git push origin my-new-feature`)
+5. Создайте новый запрос на изменения
+
+ENJOY!
