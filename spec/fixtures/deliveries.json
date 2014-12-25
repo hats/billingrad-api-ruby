@@ -1,0 +1,48 @@
+{
+  "error": false,
+  "data": [
+    {
+      "did": 83,
+      "name": "Delivery 1",
+      "createDate": 1414150222434,
+      "creator": "df554239ebdc00553963a9ee7d64a9a3",
+      "pid": "df554239ebdc00553963a9ee7d64b406",
+      "sendTo": "Some people",
+      "sender": "Qlean.ru",
+      "lastMessage": "Test message 1",
+      "lastDate": 1414162998535,
+      "lastStatus": 2,
+      "lastFailedCount": 0,
+      "lastDeliveryCount": 3
+    },
+    {
+      "did": 89,
+      "name": "Delivery 2",
+      "createDate": 1417784634973,
+      "creator": "df554239ebdc00553963a9ee7d64a9a3",
+      "pid": "df554239ebdc00553963a9ee7d64b406",
+      "sendTo": "Some people",
+      "sender": "Qlean.ru",
+      "lastMessage": "Test message 2",
+      "lastDate": 1417790077831,
+      "lastStatus": 2,
+      "lastFailedCount": 0,
+      "lastDeliveryCount": 3
+    },
+    {
+      "did": 90,
+      "name": "Delivery 3",
+      "createDate": 1418742244547,
+      "creator": "df554239ebdc00553963a9ee7d64a9a3",
+      "pid": "df554239ebdc00553963a9ee7d64b406",
+      "sendTo": "Some people",
+      "sender": "Qlean.ru",
+      "lastMessage": "Test message 3",
+      "lastDate": 1418754727246,
+      "lastStatus": 2,
+      "lastFailedCount": 0,
+      "lastDeliveryCount": 0
+    }
+  ],
+  "time": 1419502498128
+}
