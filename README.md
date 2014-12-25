@@ -18,7 +18,7 @@ gem 'billingrad-api-ruby', github: 'hats/billingrad-api-ruby'
 
 ``` ruby
 require 'rubygems'
-require 'billingrad-api-ruby'
+require 'billingrad'
 
 # укажите ваши данные здесь
 open_api_key  = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
