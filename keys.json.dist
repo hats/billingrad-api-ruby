@@ -1,9 +1,0 @@
-{
-  "open":  "YOU-OPEN-KEY",
-  "close": "YOU-CLOSE-KEY",
-  "pid":   "YOU-PROJECT-ID",
-  "did":   "YOU-DELIVERY-ID",
-  "mid":   "YOU-MESSAGE-ID",
-  "phone": "YOU-PHONE-NUMBER",
-  "text":  "YOU-TEXT"
-}
