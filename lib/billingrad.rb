@@ -1,5 +1,8 @@
 require 'billingrad/version'
+require 'billingrad/client'
 
 module Billingrad
-  # Your code goes here...
+  def self.client(options={})
+    Client.new(options)
+  end
 end
