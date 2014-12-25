@@ -1,0 +1,32 @@
+{
+  "error": false,
+  "data": [
+    {
+      "_rev": "16-9c016799cab3960ca6d0ef850ab3c051",
+      "name": "Qlean",
+      "creator": "df554239ebdc00553963a9ee7d64a9a3",
+      "smsPrice": 110,
+      "createDate": 1414150021437,
+      "avatar": "/upload/thumb/8FAD9eBE-Be2F-48c5-84e8-0506Dd6E33b8.jpg",
+      "fullName": "",
+      "description": "",
+      "sender": [
+        {
+          "sender": "Qlean.ru",
+          "approved": true,
+          "date": 1414150200798
+        }
+      ],
+      "request": {},
+      "delivery":
+        {
+          "requested": true,
+          "_isBox": true,
+          "deny": false,
+          "approved": true
+        },
+      "id": "df554239ebdc00553963a9ee7d64b406"
+    }
+  ],
+  "time": 1419502497701
+}
