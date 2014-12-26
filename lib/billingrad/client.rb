@@ -35,7 +35,7 @@ module Billingrad
       raise ArgumentError, 'Parameter must contain key :text' unless options.has_key? :text
 
       @data = { did: @did, to: options[:to], text: options[:text], planned: 1 }
-      resp = responce :send
+      resp = response :send
       resp.body
     end
 
@@ -43,13 +43,13 @@ module Billingrad
       raise ArgumentError, 'Parameter type must be Hash' unless options.class == Hash
       raise ArgumentError, 'Parameter must contain key :mid' unless options.has_key? :mid
       @data = { mid: options[:mid] }
-      resp = responce :info
+      resp = response :info
       resp.body
     end
 
     def projects
       @data = { }
-      resp = responce :projects
+      resp = response :projects
       resp.body
     end
 
@@ -58,13 +58,13 @@ module Billingrad
       raise ArgumentError, 'Parameter must contain key :pid' unless options.has_key? :pid
 
       @data = { pid: options[:pid] }
-      resp = responce :deliveries
+      resp = response :deliveries
       resp.body
     end
 
     def test
       @data = { a: 1, b: 2 }
-      resp = responce :test
+      resp = response :test
       resp.body
     end
 
@@ -74,7 +74,7 @@ module Billingrad
       CGI::escape(Base64.encode64(Digest::SHA256.digest("#{@close}#{@data.to_json}")).gsub(/\n/, ''))
     end
 
-    def responce(method)
+    def response(method)
       conn = Faraday.new(url: @@host) do |faraday|
         faraday.request  :json
         faraday.response :json, :content_type => /\bjson$/
