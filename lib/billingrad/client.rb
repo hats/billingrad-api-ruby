@@ -18,31 +18,18 @@ module Billingrad
 
     attr_accessor :open, :close, :did
 
-    def initialize(options = {})
-      raise ArgumentError, 'Parameter type must be Hash' unless options.class == Hash
-      unless options.empty?
-        raise ArgumentError, 'Parameter must contain key :open' unless options.has_key? :open
-        raise ArgumentError, 'Parameter must contain key :close' unless options.has_key? :close
-        raise ArgumentError, 'Parameter must contain key :did' unless options.has_key? :did
-
-        @open, @close, @did = options[:open], options[:close], options[:did]
-      end
+    def initialize(open:, close:, did:)
+      @open, @close, @did = open, close, did
     end
 
-    def send(options = {})
-      raise ArgumentError, 'Parameter type must be Hash' unless options.class == Hash
-      raise ArgumentError, 'Parameter must contain key :to' unless options.has_key? :to
-      raise ArgumentError, 'Parameter must contain key :text' unless options.has_key? :text
-
-      @data = { did: @did, to: options[:to], text: options[:text], planned: 1 }
+    def send(to:, text:)
+      @data = { did: @did, to: to, text: text, planned: 1 }
       resp = response :send
       resp.body
     end
 
-    def info(options = {})
-      raise ArgumentError, 'Parameter type must be Hash' unless options.class == Hash
-      raise ArgumentError, 'Parameter must contain key :mid' unless options.has_key? :mid
-      @data = { mid: options[:mid] }
+    def info(mid:)
+      @data = { mid: mid }
       resp = response :info
       resp.body
     end
@@ -53,11 +40,8 @@ module Billingrad
       resp.body
     end
 
-    def deliveries(options = {})
-      raise ArgumentError, 'Parameter type must be Hash' unless options.class == Hash
-      raise ArgumentError, 'Parameter must contain key :pid' unless options.has_key? :pid
-
-      @data = { pid: options[:pid] }
+    def deliveries(pid:)
+      @data = { pid: pid }
       resp = response :deliveries
       resp.body
     end
