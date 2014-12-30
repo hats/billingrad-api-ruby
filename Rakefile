@@ -30,12 +30,12 @@ task :default do
   p client.projects
   p 'Print deliveries method:'
   p client.deliveries pid: project_id
-  p 'Print info method:'
-  p client.info mid: message_id
   # p 'Print send method:'
-  # p client.send(
+  # p client.send_message(
   #           to: phone,
   #           text: text
   # )
+  p 'Print info method:'
+  p client.info mid: message_id
 
 end

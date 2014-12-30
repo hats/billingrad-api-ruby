@@ -26,9 +26,9 @@ describe Billingrad::Client do
       end
     end
 
-    describe '.send' do
+    describe '.send_message' do
       it 'should return an array with correct message id' do
-        expect(@client.send(to: 'phone-number', text: 'test message')['data']).to eq(6008.to_s)
+        expect(@client.send_message(to: 'phone-number', text: 'test message')['data']).to eq(6008.to_s)
       end
     end
 

@@ -22,7 +22,7 @@ module Billingrad
       @open, @close, @did = open, close, did
     end
 
-    def send(to:, text:)
+    def send_message(to:, text:)
       @data = { did: @did, to: to, text: text, planned: 1 }
       resp = response :send
       resp.body

@@ -27,14 +27,14 @@ delivery_id   = 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
 message_id    = 'ccccccccccccccccccccccccccccc'
 
 # настройте клиент для работы с Billingrad API
-client = Billingrad::Client.new(
+@client = Billingrad::Client.new(
   open: open_api_key,
   close: close_api_key,
   did:  delivery_id
 )
 
 # отправка sms-сообщения
-@client.send(
+@client.send_message(
   to: '+79261234567',
   text: 'Привет! Это тестовое сообщение!'
 )
