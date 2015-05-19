@@ -11,6 +11,7 @@ module Billingrad
     @@methods = {
         send: 'delivery/createMessage',
         info: 'delivery/messageInfo',
+        status: 'delivery/status',
         test: 'test/testSum',
         projects: 'project/list',
         deliveries: 'delivery/list'
@@ -31,6 +32,12 @@ module Billingrad
     def info(mid:)
       @data = { mid: mid }
       resp = response :info
+      resp.body
+    end
+
+    def status(mid:)
+      @data = { mid: mid }
+      resp = response :status
       resp.body
     end
 

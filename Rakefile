@@ -24,18 +24,19 @@ task :default do
       did:  delivery_id
   )
 
-  p 'Print test method:'
-  p client.test
-  p 'Print projects method:'
-  p client.projects
-  p 'Print deliveries method:'
-  p client.deliveries pid: project_id
+  # p 'Print test method:'
+  # p client.test
+  # p 'Print projects method:'
+  # p client.projects
+  # p 'Print deliveries method:'
+  # p client.deliveries pid: project_id
   # p 'Print send method:'
-  # p client.send_message(
+  # res =  client.send_message(
   #           to: phone,
   #           text: text
   # )
+  # p res
   p 'Print info method:'
-  p client.info mid: message_id
+  p client.status mid: 250812
 
 end
