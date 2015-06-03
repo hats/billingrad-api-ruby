@@ -1,5 +1,4 @@
 require 'base64'
-require 'digest'
 require 'json'
 require 'faraday'
 require 'faraday_middleware'
@@ -62,7 +61,7 @@ module Billingrad
     private
 
     def sign
-      CGI::escape(Base64.encode64(Digest::SHA256.digest("#{@close}#{@data.to_json}")).gsub(/\n/, ''))
+      CGI::escape(Base64.encode64(OpenSSL::Digest::SHA256.digest("#{@close}#{@data.to_json}")).gsub(/\n/, ''))
     end
 
     def response(method)
