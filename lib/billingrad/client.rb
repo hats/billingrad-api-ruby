@@ -6,7 +6,7 @@ require 'faraday_middleware'
 module Billingrad
   class Client
 
-    @@host = 'http://my.billingrad.com/api'.freeze
+    @@host = 'http://my.billingrad.ru/api'.freeze
     @@methods = {
         send: 'delivery/createMessage',
         info: 'delivery/messageInfo',
